@@ -1,6 +1,7 @@
 # amnotifyMonitor
 
 This Python script monitors AMNotify for restocks and posts updates via Discord webhook
+
 ![Showcase of AMNotifyMonitor](https://i.imgur.com/wQtMl1d.png)
 ## How to run the script
 
