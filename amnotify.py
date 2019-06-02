@@ -1,9 +1,11 @@
 """ MADE BY Syre#9999 & samueI#0001 """
 
+
 import requests
 import json
 import time
 import datetime
+
 
 delay = 0.01
 datetime.datetime.now().time()
@@ -12,20 +14,6 @@ datetime.time(15, 8, 24, 78915)
 
 stockEndpoint = "https://amnotify.com/api/stock/available"
 webhook_url = 'https://discordapp.com/api/webhooks/XXXXXXXXXXXXXXXXXX/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
-
-
-print("           __  __ _   _       _   _  __       ")
-print("     /\   |  \/  | \ | |     | | (_)/ _|      ")
-print("    /  \  | \  / |  \| | ___ | |_ _| |_ _   _ ")
-print("   / /\ \ | |\/| | . ` |/ _ \| __| |  _| | | |")
-print("  / ____ \| |  | | |\  | (_) | |_| | | | |_| |")
-print(" /_/    \_\_|  |_|_| \_|\___/ \__|_|_|  \__, |")
-print("                                         __/ |")
-print("                                        |___/ ")
-print("")
-print("AMNotify Monitor by Syre#9999 & samueI#0001")
-time.sleep(2)
-print("")
 
 
 headers = {
@@ -62,6 +50,39 @@ in_stock = {
     }]
 }
 
+running = {
+    "username": "AMNotify Monitor",
+    "avatar_url": "https://i.imgur.com/ELyJcw2.png",
+    "embeds": [{
+        "color": 16721733,
+        "description": "Monitor is now up and running.",
+        "author": {
+            "name": "AMNotify",
+            "url": "https://amnotify.com/",
+            "icon_url": "https://i.imgur.com/ELyJcw2.png"
+         },
+    }]
+}
+
+
+print("           __  __ _   _       _   _  __       ")
+print("     /\   |  \/  | \ | |     | | (_)/ _|      ")
+print("    /  \  | \  / |  \| | ___ | |_ _| |_ _   _ ")
+print("   / /\ \ | |\/| | . ` |/ _ \| __| |  _| | | |")
+print("  / ____ \| |  | | |\  | (_) | |_| | | | |_| |")
+print(" /_/    \_\_|  |_|_| \_|\___/ \__|_|_|  \__, |")
+print("                                         __/ |")
+print("                                        |___/ ")
+print("")
+print("AMNotify Monitor by Syre#9999 & samueI#0001")
+time.sleep(2)
+print("")
+
+response = requests.post(
+webhook_url, data=json.dumps(running),
+headers={'Content-Type': 'application/json'})
+
+
 def waitForStock():
     s = requests.session()
     notLoaded = True
@@ -79,4 +100,6 @@ def waitForStock():
         else:
             print("[", datetime.datetime.now().time(), "] AMNotify is currently sold out.")
             time.sleep(delay)
+
+            
 waitForStock()
