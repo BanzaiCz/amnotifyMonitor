@@ -36,7 +36,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Help
 
-* DM me on Discord if you need help with anything specific @ offIIine#0001
+* DM me on Discord if you need help with anything specific @ offIine#0001
 * [Twitter](https://twitter.com/samoinsecure)
 * [Mail](mailto:amnotifymonitor@samuelmikula.com)
 
