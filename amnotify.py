@@ -1,4 +1,4 @@
-""" MADE BY Syre#9999 & samueI#0001 """
+""" MADE BY Syre#9999 & offIine#0001 """
 
 
 import requests
@@ -45,7 +45,7 @@ in_stock = {
             }
         ],
         "footer": {
-            "text": "Monitor by Syre#9999 & samueI#0001"
+            "text": "Monitor by Syre#9999 & offIine#0001"
         }
     }]
 }
